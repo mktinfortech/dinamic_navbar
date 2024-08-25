@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://kit.fontawesome.com/8e37b17d93.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+    <title>Responsive Header</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <p>EJ.TECH</p>
+            </div>
+
+            <div class="navigation">
+                <nav>
+                    <a href="#">SOBRE</a>
+                    <a href="#">PROJETOS</a>
+                    <a href="#">SKILLS</a>
+                    <a href="#">CONTATOS</a>
+                </nav>
+            </div>
+
+            <button onclick="animarMenu()" id="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <nav>
+                    <a href="#">SOBRE</a>
+                    <a href="#">PROJETOS</a>
+                    <a href="#">SKILLS</a>
+                    <a href="#">CONTATOS</a>
+                </nav>
+            </div>
+
+
+            <div class="socials">
+                <button><a href="https://www.linkedin.com/in/erivaldo-de-jesus/" target="_blank"> <img src="./assets/images/link.svg" alt=""></a></button>
+                <button><a href="https://github.com/mktinfortech" target="_blank"> <img src="./assets/images/git.svg" alt=""></a></button>
+                <button><a href="https://www.instagram.com/analista.nety/" target="_blank"> <img src="./assets/images/insta.svg" alt=""></a></button>
+            </div>
+        </div>
+    </header>
+
+
+   <script src="animar.js"></script>
+</body>
+</html>

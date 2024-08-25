@@ -1,0 +1,154 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+header{
+    background-color: black;
+    background-image: linear-gradient(75deg, rgba(73, 64, 64, 0.89), black);
+    width: 100%;
+    padding: 25px;
+}
+
+.logo p{
+    color: rgb(133, 131, 206);
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.socials button{
+  width: 25px;
+  height: 25px;
+  background-color: rgb(113, 121, 194);
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+
+}
+
+.navigation nav a{
+    font-size: 15px;
+    color: antiquewhite;
+    text-decoration: none;
+    margin: 45px;
+    position: relative;
+}
+
+.navigation nav a::after{
+    content: "  ";
+    width: 0px;
+    height: 2px;
+    background-color: rgb(255, 196, 245);
+    position: absolute;
+    top: 21px;
+    left: 0;
+    transition:  width 0.4s;
+}
+.navigation nav a:hover{
+    color: blueviolet;
+    transition: 0.5s;
+}
+.navigation nav a:hover::after{
+    width: 35px;
+}
+
+
+/*Estilização Menu Mobile*/
+.menu-mobile{
+    background-color: rgba(168, 187, 148, 0.747);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.menu-mobile nav a {
+  color: azure;
+  text-decoration: none;
+  display: block;
+  padding: 20px 30px;
+  font-size: 15pt;
+}
+.menu-mobile nav a:hover{
+    background-color: rgba(95, 158, 160, 0.336);
+}
+
+#btn-menu{
+    display: none;
+}
+
+@media  screen and (max-width: 931px) {
+   .navigation, .socials{
+    display: none;
+   }
+   .logo {
+   width: 100%;
+   }
+   .menu-mobile.abrir{
+    visibility: visible;
+    height: calc(100vh - 77px);
+   } 
+   #btn-menu{
+    display: block;
+}
+}
+
+/*Criando Menu Hamburguer*/
+#btn-menu {
+background-color: transparent;
+width: 50px;
+height: 40px;
+outline: none;
+cursor: pointer;
+border: 2px solid white;
+transition: .2s;
+}
+
+.linha{
+    position: relative;
+    height: 3px;
+    background-color: blueviolet;
+    width: 25px;
+    display: block;
+    margin: 5px auto;
+    transform-origin: center;
+    transition: .2s;
+}
+
+
+#btn-menu.ativar{
+    border: 2px solid rgb(207, 124, 124);
+}
+
+#btn-menu.ativo .linha:nth-child(1){
+    transform: translateY(8px) rotate(-45deg);
+    background-color: blueviolet;
+}
+#btn-menu.ativo .linha:nth-child(3){
+    transform: translateY(-8px) rotate(45deg);
+    background-color: blueviole
+}
+#btn-menu.ativo .linha:nth-child(2){
+    width: 0;
+}
+
+
